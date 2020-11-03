@@ -2,7 +2,7 @@
 
 Twitter-Logger
 
-# pip3 install python-twitter
+use,pip3 install python-twitter, for library
 
 Grab my Retweet Bot while you're at it, you will need it or Twitter will terminate the account you attach this code to.
 https://github.com/60MilesPerHour/RetweetBot
@@ -16,3 +16,4 @@ You are forbidden to merchandise off of this software unless otherwise granted b
 By downloading this software, you agree that i the issuer am not liable for any infringement, claims, damages, or any other liabilities, whether contracted or otherwise.
 
 Contact @60MilesPerHour if you have any questions and i will try to answer them to the best of my ability.
+
