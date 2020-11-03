@@ -2,6 +2,8 @@
 
 Twitter-Logger
 
+# pip3 install python-twitter
+
 Grab my Retweet Bot while your at it, you will need it or twitter will terminate the account you attach this code to.
 https://github.com/60MilesPerHour/RetweetBot
 
