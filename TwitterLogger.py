@@ -9,32 +9,14 @@
 #
 # 1 GB = roughly 2 months of harvesting data
 
-import twitter # pip3 install python-twitter
+import twitter
 import time
 import os
 import sys
 import datetime
-import hashlib
+from TLC import Cleaner
 
-def Cleaner():
-  output_file_path = "ENTER PATH TO OUTPUT FILE AND NAME, FILE WILL BE CREATED ON FIRST RUN"
-  input_file_path = "ENTER PATH TO INPUT FILE AND NAME, FILE WILL BE CREATED ON FIRST RUN" # YOU DEFINED THIS IN LINE 51
-
-  completed_lines_hash = set()
-
-  output_file = open(output_file_path, "w")
-
-  for line in open(input_file_path, "r"):
-
-    hashValue = hashlib.md5(line.rstrip().encode('utf-8')).hexdigest()
-
-    if hashValue not in completed_lines_hash:
-      output_file.write(line)
-      completed_lines_hash.add(hashValue)
-
-  output_file.close()
-
-api = twitter.Api(consumer_key='', # INPUT YOUR API KEYS HERE 37-40
+api = twitter.Api(consumer_key='', # INPUT YOUR API KEYS HERE 19-22
   consumer_secret='',
   access_token_key='',
   access_token_secret='', sleep_on_rate_limit=True) # HAS TO BE SET TO TRUE OR THE TWITTER POLICE WILL COME
@@ -48,7 +30,7 @@ while i == True: # WHERE THE MAGIC HAPPENS (DOES NOT END)
     for tweet in search:
 
         T = tweet.id
-        appendFile = open('FILENAME_NOT_CLEAN.txt','a') # NAME CAN BE CHANGED, BUT DO NOT CHANGE EXTENSION
+        appendFile = open('Unfiltered.txt','a') # NAME CAN BE CHANGED, BUT DO NOT CHANGE EXTENSION
         appendFile.write('\n')
         appendFile.write(str(T))
         appendFile.write(" | Wrote on --> ")
@@ -58,13 +40,11 @@ while i == True: # WHERE THE MAGIC HAPPENS (DOES NOT END)
         D = tweet.text
 
         appendFile.write(str(D))
-        appendFile.write(" | Written on --> ")
-        appendFile.write(str(datetime.datetime.now()))
         appendFile.write('\n')
         appendFile.close()
         time.sleep(15)
         Cleaner()
-        continue  
+        continue
     continue
 
 # LOG'S ENTIRE TWEET... RETWEET... LIKE... USERNAME... WHEN THEY WROTE IT... LINK TO TWEET... MEDIA IF ANY...
