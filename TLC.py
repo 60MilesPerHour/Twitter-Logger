@@ -1,8 +1,8 @@
 import hashlib
 
 def Cleaner():
-  output_file_path = "/home/miles/Desktop/Python 3/Cleaned.txt"
-  input_file_path = "/home/miles/Desktop/Python 3/Dirty.txt" # YOU DEFINED THIS IN LINE 
+  output_file_path = "Output File Path Here"
+  input_file_path = "Input File Path Here" # YOU DEFINED THIS IN LINE 
 
   completed_lines_hash = set()
 
