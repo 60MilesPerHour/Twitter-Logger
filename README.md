@@ -1,4 +1,4 @@
-# Twitter Logger
+# Deprecated - Twitter Logger
 
 Have you ever wanted an automatically generated text file of raw data pulled from Twitter that logs every mention of a specific phrase, hashtag, or user? This script does exactly that. Upon execution of the Twitter logger, you will see a raw data file filing up with data that has not been sorted yet, soon after that file is created you will see a now automatically generated cleaned up version of that specific file.
 
